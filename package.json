@@ -34,8 +34,12 @@
     },
     "win": {
       "target": [
-        "nsis"
-      ]
+        "portable",
+        "zip"
+      ],
+      "sign": null,
+      "verifyUpdateCodeSignature": false,
+      "signAndEditExecutable": false
     },
     "mac": {
       "target": [
