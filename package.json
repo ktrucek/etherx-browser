@@ -18,6 +18,9 @@
   },
   "homepage": "https://kriptoentuzijasti.io",
   "license": "MIT",
+  "overrides": {
+    "lzma-native": "8.0.6"
+  },
   "build": {
     "appId": "io.kriptoentuzijasti.etherx",
     "productName": "EtherX Browser",
@@ -48,8 +51,8 @@
     }
   },
   "devDependencies": {
-    "electron": "^33.0.0",
-    "electron-builder": "^24.13.3",
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8",
     "electron-rebuild": "^3.2.9"
   },
   "dependencies": {
