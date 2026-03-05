@@ -30,10 +30,10 @@ jobs:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
-      - name: ⚙️ Setup Node.js 20
+      - name: ⚙️ Setup Node.js 18 LTS
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
           cache: 'npm'
 
       - name: 🛠️ Install system build dependencies
@@ -77,10 +77,10 @@ jobs:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
-      - name: ⚙️ Setup Node.js 20
+      - name: ⚙️ Setup Node.js 18 LTS
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
           cache: 'npm'
 
       - name: � Setup Python 3.11
@@ -100,7 +100,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Disable code-signing (no cert on CI)
           CSC_IDENTITY_AUTO_DISCOVERY: 'false'
-          WIN_CSC_LINK: ''
 
       - name: 📤 Upload Windows artifacts
         uses: actions/upload-artifact@v4
@@ -120,10 +119,10 @@ jobs:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
-      - name: ⚙️ Setup Node.js 20
+      - name: ⚙️ Setup Node.js 18 LTS
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
           cache: 'npm'
 
       - name: 📦 Install npm packages (runs electron-rebuild via postinstall)
@@ -137,7 +136,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Disable code-signing (no Apple cert on CI)
           CSC_IDENTITY_AUTO_DISCOVERY: 'false'
-          CSC_LINK: ''
 
       - name: 📤 Upload macOS artifacts
         uses: actions/upload-artifact@v4
