@@ -9,9 +9,9 @@
 
 'use strict';
 
-// Primary UA: Masquerades as Chrome 122 on Windows 10 + EtherX identifier
+// Primary UA: Masquerades as Chrome 130 on Windows 10 + EtherX identifier
 const DEFAULT_UA =
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 EtherX/1.0';
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 EtherX/2.2.6';
 
 let _current = DEFAULT_UA;
 
@@ -32,11 +32,11 @@ const UserAgentManager = {
   },
 
   PRESETS: {
-    'EtherX Default (Chrome 122)': DEFAULT_UA,
-    'Chrome 122 Windows':
-      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-    'Chrome 122 macOS':
-      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+    'EtherX Default (Chrome 130)': DEFAULT_UA,
+    'Chrome 130 Windows':
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+    'Chrome 130 macOS':
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
     'Firefox 124 Windows':
       'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0',
     'Safari 17 macOS':
