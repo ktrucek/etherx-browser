@@ -424,7 +424,7 @@ webview.browse-frame.active{opacity:1;pointer-events:auto;z-index:5;}
 .sit-btn .sit-icon{font-size:22px}
 .sit-btn.active{background:rgba(102,126,234,.2);color:var(--accent)}
 .sit-btn:hover:not(.active){background:rgba(255,255,255,.07);color:var(--text2)}
-.settings-body{flex:1;overflow-y:auto;padding:16px}
+.settings-body{flex:1;overflow-y:auto;padding:16px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
 .settings-body::-webkit-scrollbar{width:4px}.settings-body::-webkit-scrollbar-thumb{background:var(--border2)}
 .s-tab-pane{display:none}
 .s-tab-pane.active{display:block}
@@ -571,7 +571,7 @@ a{-webkit-app-region:no-drag}
   <div class="title-right electron-no-drag"><span id="privateIndicator">🕶 Private</span><span id="titleDate" style="opacity:0.7"></span><span id="titleClock"></span><div style="position:relative"><button id="titleProfileBtn" style="background:var(--bg3);border:1px solid var(--border2);border-radius:12px;padding:2px 10px;color:var(--text2);cursor:pointer;font-size:11px;display:flex;align-items:center;gap:4px">👤 <span id="activeProfileName">Default</span> ▾</button><div id="profileDropdown"></div></div></div>
 </div>
 <div class="menu-bar" id="menuBar">
-  <div class="menu-item" data-menu="file">File<div class="dropdown"><div class="di" id="mi-new-tab"><span class="icon">➕</span>New Tab<span class="sc">Ctrl+T</span></div><div class="di" id="mi-new-private"><span class="icon">🕶️</span>New Private Window<span class="sc">Ctrl+Shift+N</span></div><div class="dsep"></div><div class="di" id="mi-open-location"><span class="icon">🌐</span>Open Location…<span class="sc">Ctrl+L</span></div><div class="dsep"></div><div class="di" id="mi-close-tab"><span class="icon">⊠</span>Close Tab<span class="sc">Ctrl+W</span></div><div class="dsep"></div><div class="di" id="mi-print"><span class="icon">🖨️</span>Print…<span class="sc">Ctrl+P</span></div></div></div>
+  <div class="menu-item" data-menu="file">File<div class="dropdown"><div class="di" id="mi-new-tab"><span class="icon">➕</span>New Tab<span class="sc">Ctrl+T</span></div><div class="di" id="mi-new-private"><span class="icon">🕶️</span>New Private Window<span class="sc">Ctrl+Shift+N</span></div><div class="dsep"></div><div class="di" id="mi-open-location"><span class="icon">🌐</span>Open Location…<span class="sc">Ctrl+L</span></div><div class="dsep"></div><div class="di" id="mi-close-tab"><span class="icon">⊠</span>Close Tab<span class="sc">Ctrl+W</span></div><div class="dsep"></div><div class="di" id="mi-share-page"><span class="icon">🔗</span>Share Page</div><div class="di" id="mi-save-page"><span class="icon">💾</span>Save Page</div><div class="di" id="mi-cast-page"><span class="icon">📺</span>Cast…</div><div class="di" id="mi-qr-sync"><span class="icon">📱</span>Sync via QR</div><div class="di" id="mi-default-browser"><span class="icon">🌐</span>Set as Default Browser</div><div class="dsep"></div><div class="di" id="mi-print"><span class="icon">🖨️</span>Print…<span class="sc">Ctrl+P</span></div></div></div>
   <div class="menu-item" data-menu="edit">Edit<div class="dropdown" style="min-width:290px"><div class="di" id="mi-undo"><span class="icon">↩</span>Undo Typing<span class="sc">Ctrl+Z</span></div><div class="di" id="mi-redo"><span class="icon">↪</span>Redo<span class="sc">Ctrl+Shift+Z</span></div><div class="dsep"></div><div class="di disabled" id="mi-cut" style="opacity:.4"><span class="icon">✂</span>Cut<span class="sc">Ctrl+X</span></div><div class="di" id="mi-copy"><span class="icon">📋</span>Copy<span class="sc">Ctrl+C</span></div><div class="di" id="mi-paste"><span class="icon">📄</span>Paste<span class="sc">Ctrl+V</span></div><div class="di" id="mi-paste-match"><span class="icon">📄</span>Paste and Match Style<span class="sc">Ctrl+Shift+V</span></div><div class="di" id="mi-delete"><span class="icon">🗑</span>Delete</div><div class="dsep"></div><div class="di" id="mi-select-all"><span class="icon">☐</span>Select All<span class="sc">Ctrl+A</span></div><div class="dsep"></div><div class="di" id="mi-autofill-form"><span class="icon">✏️</span>AutoFill Form<span class="sc">Ctrl+Shift+A</span></div><div class="dsep"></div><div class="di" id="mi-distraction"><span class="icon">🛑</span>Distraction Control<span class="sc" style="font-size:10px">▶</span></div><div class="dsep"></div><div class="di" id="mi-find"><span class="icon">🔍</span>Find<span class="sc" style="font-size:10px">▶</span></div><div class="di" id="mi-spelling"><span class="icon">Abc</span>Spelling and Grammar<span class="sc" style="font-size:10px">▶</span></div><div class="di" id="mi-substitutions"><span class="icon">↻</span>Substitutions<span class="sc" style="font-size:10px">▶</span></div><div class="di" id="mi-transformations"><span class="icon">Abc</span>Transformations<span class="sc" style="font-size:10px">▶</span></div><div class="di" id="mi-speech"><span class="icon">🗣</span>Speech<span class="sc" style="font-size:10px">▶</span></div><div class="dsep"></div><div class="di" id="mi-autofill"><span class="icon">✏️</span>AutoFill<span class="sc" style="font-size:10px">▶</span></div><div class="di disabled" id="mi-dictation" style="opacity:.5"><span class="icon">🎙</span>Start Dictation<span class="sc">🎙</span></div><div class="di" id="mi-emoji"><span class="icon">😀</span>Emoji &amp; Symbols<span class="sc">🌐</span></div></div></div>
   <div class="menu-item" data-menu="view">View<div class="dropdown" style="min-width:310px"><div class="di" id="mi-always-toolbar"><span class="icon" id="mi-always-toolbar-chk">✓</span>Always Show Toolbar in Full Screen</div><div class="di" id="mi-customise-toolbar"><span class="icon">🔧</span>Customise Toolbar…</div><div class="dsep"></div><div class="di" id="mi-always-tab-bar"><span class="icon" id="mi-always-tab-bar-chk" style="opacity:0">✓</span>Always Show Tab Bar</div><div class="di" id="mi-show-favbar"><span class="icon" id="mi-show-favbar-chk" style="opacity:0">✓</span>Show Favourites Bar<span class="sc">⇧⌘B</span></div><div class="di" id="mi-show-statusbar"><span class="icon" id="mi-show-statusbar-chk">✓</span>Show Status Bar<span class="sc">⌘'</span></div><div class="dsep"></div><div class="di" id="mi-show-sidebar"><span class="icon" id="mi-show-sidebar-chk" style="opacity:0">✓</span>Show Sidebar<span class="sc">⇧⌘L</span></div><div class="di" id="mi-show-bm-sidebar"><span class="icon" id="mi-show-bm-sidebar-chk" style="opacity:0">✓</span>Show Bookmarks Sidebar<span class="sc">⌃⌘1</span></div><div class="di" id="mi-show-rl-sidebar"><span class="icon" id="mi-show-rl-sidebar-chk" style="opacity:0">✓</span>Show Reading List Sidebar<span class="sc">⌃⌘2</span></div><div class="di" id="mi-show-shared"><span class="icon" id="mi-show-shared-chk" style="opacity:0">✓</span>Show Shared with You</div><div class="dsep"></div><div class="di" id="mi-reader"><span class="icon">📖</span>Show Reader<span class="sc">⇧⌘R</span></div><div class="di" id="mi-tab-overview"><span class="icon">⧉</span>Show Tab Overview<span class="sc">⇧⌘Z</span></div><div class="di" id="mi-show-downloads-view"><span class="icon">⬇️</span>Show Downloads<span class="sc">⌥⌘L</span></div><div class="dsep"></div><div class="di" id="mi-stop"><span class="icon">✕</span>Stop<span class="sc">⌘.</span></div><div class="di" id="mi-reload"><span class="icon">↺</span>Reload Page<span class="sc">Ctrl+R</span></div><div class="di" id="mi-hard-reload"><span class="icon">↻</span>Reload Reducing Privacy Protections</div><div class="dsep"></div><div class="di" id="mi-translation"><span class="icon">🌐</span>Translation<span class="sc" style="font-size:10px">▶</span></div><div class="dsep"></div><div class="di disabled" id="mi-zoom-reset" style="opacity:.5"><span class="icon">⊙</span>Actual Size<span class="sc">⌘0</span></div><div class="di" id="mi-zoom-in"><span class="icon">🔍</span>Zoom In<span class="sc">Ctrl++</span></div><div class="di" id="mi-zoom-out"><span class="icon">🔎</span>Zoom Out<span class="sc">Ctrl+-</span></div><div class="dsep"></div><div class="di" id="mi-text-encoding"><span class="icon">⌘</span>Text Encoding<span class="sc" style="font-size:10px">▶</span></div><div class="dsep"></div><div class="di" id="mi-fullscreen"><span class="icon">⛶</span>Enter Full Screen<span class="sc">F11</span></div><div class="di" id="mi-responsive"><span class="icon">📐</span>Responsive Design Mode<span class="sc">Ctrl+Shift+M</span></div></div></div>
   <div class="menu-item" data-menu="history">History<div class="dropdown"><div class="di" id="mi-show-history"><span class="icon">🕒</span>Show History<span class="sc">Ctrl+H</span></div><div class="dsep"></div><div class="di" id="mi-back-menu"><span class="icon">◀</span>Back<span class="sc">Alt+←</span></div><div class="di" id="mi-fwd-menu"><span class="icon">▶</span>Forward<span class="sc">Alt+→</span></div><div class="dsep"></div><div class="di" id="mi-clear-history"><span class="icon" style="color:var(--red)">✕</span><span style="color:var(--red)">Clear History…</span></div></div></div>
@@ -788,7 +788,24 @@ a{-webkit-app-region:no-drag}
               <div class="toggle on" data-setting="openSafeFiles"></div>
             </div>
           </div>
-        </div>
+                  <div class="s-group">
+            <div class="s-row">
+              <div class="s-row-left"><div class="s-row-label">🌍 Language / Jezik</div><div class="s-row-desc">Interface language for EtherX</div></div>
+              <select class="s-select" id="langSelector">
+                <option value="en">🇬🇧 English</option>
+                <option value="hr">🇭🇷 Hrvatski</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="it">🇮🇹 Italiano</option>
+              </select>
+            </div>
+            <div class="s-row">
+              <div class="s-row-left"><div class="s-row-label">🌐 Default Browser</div><div class="s-row-desc">Make EtherX your system default browser</div></div>
+              <button class="s-btn" onclick="setAsDefaultBrowser()">Set as Default</button>
+            </div>
+          </div>
+</div>
         <!-- TABS -->
         <div class="s-tab-pane" id="stab-tabs">
           <div class="s-group">
@@ -849,6 +866,18 @@ a{-webkit-app-region:no-drag}
           <div style="text-align:center;padding:12px"><button class="s-btn-sm" id="sOpenPasswords">🔑 Open Passwords…</button></div>
         </div>
         <!-- SEARCH -->
+          <div class="s-group">
+            <div class="s-row" style="flex-direction:column;gap:8px;align-items:flex-start">
+              <div style="background:rgba(102,126,234,.1);border:1px solid rgba(102,126,234,.3);border-radius:8px;padding:12px;font-size:12px;color:#aaa;line-height:1.6;width:100%">
+                <strong style="color:#e0e0e0">⚠️ Privacy Notice</strong><br>
+                EtherX does not store, transmit, or have access to your passwords. Passwords are encrypted by your OS secure storage (Keychain / Credential Manager / libsecret).
+                <strong style="color:#e0e0e0">Kriptoentuzijasti.io cannot decrypt or recover your passwords.</strong>
+              </div>
+              <button class="s-btn" onclick="window.etherx?.nav.openExternal('https://bitwarden.com/download/') || window.open('https://bitwarden.com/download/','_blank')">🔐 Download Bitwarden (Recommended)</button>
+              <div style="font-size:11px;color:#666">Bitwarden is a trusted open-source password manager.</div>
+            </div>
+          </div>
+        </div>
         <div class="s-tab-pane" id="stab-search">
           <div class="s-group">
             <div class="s-row"><div class="s-row-left"><div class="s-row-label">Search engine</div></div><select class="s-select" data-setting="searchEngine"><option>Google</option><option>DuckDuckGo</option><option>Bing</option><option>Brave Search</option><option>Startpage</option><option>Yahoo</option><option>Ecosia</option><option value="custom">Custom…</option></select></div>
@@ -3352,6 +3381,190 @@ document.getElementById('mi-download-app')?.addEventListener('click',()=>{
 
 // PWA Service Worker
   if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(()=>{});}
+
+
+// ════════════════════════════════════════════════════════════════════════════
+// EtherX Extended Features © 2025–2026 Kriptoentuzijasti.io
+// ════════════════════════════════════════════════════════════════════════════
+
+// ── i18n ────────────────────────────────────────────────────────────────────
+const ETHERX_LANGS = {
+  en:{name:'English',flag:'🇬🇧',t:{search:'Search or enter URL',share:'Share',save:'Save Page',cast:'Cast',defaultBrowser:'Set as Default Browser',defaultBrowserDone:'EtherX is now your default browser!',readingMode:'Reading Mode',syncQR:'Sync via QR Code',lang:'Language'}},
+  hr:{name:'Hrvatski',flag:'🇭🇷',t:{search:'Pretraži ili unesi URL',share:'Podijeli',save:'Spremi stranicu',cast:'Emitiranje',defaultBrowser:'Postavi kao zadani preglednik',defaultBrowserDone:'EtherX je sada vaš zadani preglednik!',readingMode:'Način čitanja',syncQR:'Sinkroniziraj QR kodom',lang:'Jezik'}},
+  de:{name:'Deutsch',flag:'🇩🇪',t:{search:'Suchen oder URL eingeben',share:'Teilen',save:'Seite speichern',cast:'Streamen',defaultBrowser:'Als Standardbrowser festlegen',defaultBrowserDone:'EtherX ist jetzt Ihr Standardbrowser!',readingMode:'Lesemodus',syncQR:'Sync per QR-Code',lang:'Sprache'}},
+  fr:{name:'Français',flag:'🇫🇷',t:{search:'Rechercher ou entrer une URL',share:'Partager',save:'Enregistrer',cast:'Diffuser',defaultBrowser:'Définir par défaut',defaultBrowserDone:'EtherX est votre navigateur par défaut!',readingMode:'Mode lecture',syncQR:'Sync via QR',lang:'Langue'}},
+  es:{name:'Español',flag:'🇪🇸',t:{search:'Buscar o introducir URL',share:'Compartir',save:'Guardar',cast:'Transmitir',defaultBrowser:'Establecer predeterminado',defaultBrowserDone:'EtherX es tu navegador predeterminado!',readingMode:'Modo lectura',syncQR:'Sync via QR',lang:'Idioma'}},
+  it:{name:'Italiano',flag:'🇮🇹',t:{search:'Cerca o inserisci URL',share:'Condividi',save:'Salva',cast:'Trasmetti',defaultBrowser:'Imposta predefinito',defaultBrowserDone:'EtherX è il tuo browser predefinito!',readingMode:'Modalità lettura',syncQR:'Sync via QR',lang:'Lingua'}}
+};
+let _etherxLang = localStorage.getItem('etherx_lang') || 'en';
+function t(key){ return (ETHERX_LANGS[_etherxLang]||ETHERX_LANGS.en).t[key] || key; }
+function setLang(lang){ _etherxLang = lang; localStorage.setItem('etherx_lang', lang); if(window.etherx?.i18n) window.etherx.i18n.setLanguage(lang).catch(()=>{}); }
+
+// ── Language selector init ────────────────────────────────────────────────────
+(function initLangSelector(){
+  const sel = document.getElementById('langSelector');
+  if(!sel) return;
+  sel.value = _etherxLang;
+  sel.addEventListener('change', function(){
+    setLang(this.value);
+    const inp = document.getElementById('urlInput');
+    if(inp) inp.placeholder = t('search');
+    showToast('🌍 Language: ' + (ETHERX_LANGS[this.value]||ETHERX_LANGS.en).name);
+  });
+  const inp = document.getElementById('urlInput');
+  if(inp && _etherxLang !== 'en') inp.placeholder = t('search');
+})();
+
+// ── Tab persistence (wraps etherx.tabs IPC) ──────────────────────────────────
+async function persistTabsToSQLite(){
+  if(!window.etherx || !window.etherx.tabs) return;
+  const STATE_ref = typeof STATE !== 'undefined' ? STATE : null;
+  if(!STATE_ref || !STATE_ref.tabs) return;
+  const isPrivate = STATE_ref.isPrivate || false;
+  for(const tab of STATE_ref.tabs){
+    if(!isPrivate){
+      await window.etherx.tabs.save({
+        id: tab.id, url: tab.url||'', title: tab.title||'New Tab',
+        isActive: tab.id===STATE_ref.activeTabId,
+        scrollPosition: tab.scrollPos||0, incognito: false
+      }).catch(()=>{});
+    }
+  }
+}
+setInterval(persistTabsToSQLite, 30000);
+
+// ── QR Sync modal ─────────────────────────────────────────────────────────────
+async function showQRSync(){
+  if(!window.QRCode){
+    await new Promise(res=>{ const s=document.createElement('script'); s.src='https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js'; s.onload=res; document.head.appendChild(s); });
+  }
+  let qrDataURL = '';
+  try {
+    if(window.etherx?.qrSync){
+      qrDataURL = await window.etherx.qrSync.exportProfile();
+    } else {
+      const bm = JSON.parse(localStorage.getItem('ex_bookmarks')||'[]');
+      const hist = JSON.parse(localStorage.getItem('ex_history')||'[]').slice(0,50);
+      const syncURL = 'https://n8n.kriptoentuzijasti.io/browser.html?sync=' + encodeURIComponent(btoa(unescape(encodeURIComponent(JSON.stringify({bookmarks:bm,history:hist,ts:Date.now()})))).slice(0,1800));
+      qrDataURL = syncURL;
+    }
+  } catch(e) {}
+
+  const modal = document.createElement('div');
+  modal.id = 'etherx-qr-modal';
+  modal.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;z-index:999999;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center';
+  modal.innerHTML = '<div style="background:#1a1a2e;border:1px solid #667eea;border-radius:16px;padding:32px;text-align:center;max-width:380px;width:90%">'
+    + '<h2 style="color:#e0e0e0;margin:0 0 8px">📱 ' + t('syncQR') + '</h2>'
+    + '<p style="color:#aaa;font-size:12px;margin:0 0 20px">Scan on another device to import bookmarks &amp; history</p>'
+    + '<canvas id="etherx-qr-canvas" style="border-radius:8px;background:#fff;padding:8px"></canvas>'
+    + '<p style="color:#555;font-size:10px;margin:10px 0 0">Bookmarks + History + Settings</p>'
+    + '<button onclick="document.getElementById('etherx-qr-modal').remove()" style="margin-top:16px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;border-radius:8px;padding:10px 24px;cursor:pointer">Close</button>'
+    + '</div>';
+  document.body.appendChild(modal);
+  try { QRCode.toCanvas(document.getElementById('etherx-qr-canvas'), qrDataURL||'https://n8n.kriptoentuzijasti.io/browser.html', {width:200}); } catch(e) {}
+}
+
+// ── Default Browser ───────────────────────────────────────────────────────────
+async function setAsDefaultBrowser(){
+  if(window.etherx?.defaultBrowser){
+    const r = await window.etherx.defaultBrowser.set().catch(()=>({ok:false}));
+    showToast(r&&r.ok ? '✅ ' + t('defaultBrowserDone') : '⚙️ Go to System Settings → Default Apps → select EtherX');
+  } else {
+    showToast('⚙️ System Settings → Default Apps → select EtherX Browser');
+  }
+}
+
+// ── Share / Save / Cast ───────────────────────────────────────────────────────
+async function sharePage(){
+  const tab = typeof getActiveTab !== 'undefined' ? getActiveTab() : null;
+  const url = tab?.url || location.href;
+  const title = tab?.title || document.title;
+  if(window.etherx?.share){ await window.etherx.share.shareUrl(url, title); showToast('🔗 URL copied to clipboard'); return; }
+  if(navigator.share){ try{ await navigator.share({title, url}); return; }catch{} }
+  navigator.clipboard?.writeText(url);
+  showToast('🔗 URL copied to clipboard');
+}
+async function savePage(){
+  const tab = typeof getActiveTab !== 'undefined' ? getActiveTab() : null;
+  const url = tab?.url || ''; const title = tab?.title || 'page';
+  if(window.etherx?.share){ const r = await window.etherx.share.savePageAs(url, title); if(r.ok) showToast('💾 Saved: ' + r.filePath); return; }
+  showToast('💾 Right-click the page → Save as…');
+}
+function castPage(){ showToast('📺 ' + (window.etherx ? 'Install Google Cast from Chrome Web Store' : 'Cast not available')); }
+
+// ── AI Omnibox ────────────────────────────────────────────────────────────────
+(function initAIOmnibox(){
+  const urlInput = document.getElementById('urlInput');
+  if(!urlInput) return;
+  const wrap = document.getElementById('urlBar') || urlInput.parentElement;
+  if(!wrap || wrap.style.position === 'relative') return;
+  wrap.style.position = 'relative';
+  const dd = document.createElement('div');
+  dd.id = 'ai-omnibox-dd';
+  dd.style.cssText = 'display:none;position:absolute;top:100%;left:0;right:0;z-index:9999;background:#252535;border:1px solid #667eea;border-radius:0 0 8px 8px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.5)';
+  wrap.appendChild(dd);
+  let aiTimer = null;
+  urlInput.addEventListener('input', function(){
+    clearTimeout(aiTimer);
+    const val = this.value.trim();
+    if(!val || val.includes('://') || /^[w-]+.w{2,}/.test(val)){ dd.style.display='none'; return; }
+    const isQ = val.length > 8 && (val.includes('?') || val.split(' ').length > 3);
+    if(!isQ){ dd.style.display='none'; return; }
+    aiTimer = setTimeout(()=>{
+      const q = val.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      dd.innerHTML = '<div style="padding:6px 12px;color:#888;font-size:10px;letter-spacing:.5px;text-transform:uppercase;background:#1a1a2e">AI OMNIBOX</div>'
+        + '<div style="padding:10px 12px;cursor:pointer;display:flex;gap:8px;align-items:center" onmousedown="event.preventDefault();askAIFromOmnibox(this.dataset.q)" data-q="'+q+'">'
+        + '<span style="font-size:18px">🤖</span><div><div style="font-size:12px;color:#e0e0e0">Ask AI: '+q.slice(0,60)+'</div><div style="font-size:10px;color:#667eea">Open AI assistant with this question</div></div></div>'
+        + '<div style="padding:8px 12px;cursor:pointer;font-size:12px;color:#888;border-top:1px solid #333" onmousedown="event.preventDefault();navigateTo('https://www.google.com/search?q='+encodeURIComponent(val)+'')">🔍 Google: '+q.slice(0,50)+'</div>';
+      dd.style.display = 'block';
+    }, 350);
+  });
+  urlInput.addEventListener('blur', ()=>setTimeout(()=>dd.style.display='none', 200));
+})();
+
+function askAIFromOmnibox(question){
+  document.getElementById('ai-omnibox-dd') && (document.getElementById('ai-omnibox-dd').style.display='none');
+  const inp = document.getElementById('urlInput'); if(inp) inp.value='';
+  const panel = document.getElementById('aiAgentPanel');
+  if(panel){
+    panel.style.display='flex';
+    const q = document.getElementById('aiInput');
+    if(q){ q.value=question; q.dispatchEvent(new Event('input')); }
+    setTimeout(()=>document.getElementById('aiSend')?.click(), 150);
+  } else {
+    navigateTo('https://www.google.com/search?q='+encodeURIComponent(question));
+  }
+}
+
+// ── Wire new menu items ───────────────────────────────────────────────────────
+document.getElementById('mi-share-page')?.addEventListener('click', sharePage);
+document.getElementById('mi-save-page')?.addEventListener('click', savePage);
+document.getElementById('mi-cast-page')?.addEventListener('click', castPage);
+document.getElementById('mi-qr-sync')?.addEventListener('click', showQRSync);
+document.getElementById('mi-default-browser')?.addEventListener('click', setAsDefaultBrowser);
+
+// ── Hook tab save on switch/create ────────────────────────────────────────────
+(function hookTabPersist(){
+  const _origSwitch = typeof switchTab !== 'undefined' ? switchTab : null;
+  if(_origSwitch){ window.switchTab = function(id,...a){ const r=_origSwitch.call(this,id,...a); setTimeout(persistTabsToSQLite,500); return r; }; }
+  const _origCreate = typeof createTab !== 'undefined' ? createTab : null;
+  if(_origCreate){ window.createTab = function(...a){ const r=_origCreate.apply(this,a); setTimeout(persistTabsToSQLite,800); return r; }; }
+})();
+
+// ── Handle incoming QR sync data from URL ─────────────────────────────────────
+(function handleIncomingSync(){
+  const syncB64 = new URLSearchParams(location.search).get('sync');
+  if(!syncB64) return;
+  try {
+    const data = JSON.parse(decodeURIComponent(escape(atob(syncB64))));
+    if(window.etherx?.qrSync){ window.etherx.qrSync.importProfile(JSON.stringify(data)).catch(()=>{}); }
+    if(data.bookmarks) localStorage.setItem('ex_bookmarks', JSON.stringify(data.bookmarks));
+    if(data.history) localStorage.setItem('ex_history', JSON.stringify(data.history));
+    showToast('✅ QR Sync: ' + ((data.bookmarks||[]).length) + ' bookmarks imported!');
+  } catch{}
+})();
+
+// ════════════════════════════════════════════════════════════════════════════
 
 // ── EtherX Electron IPC Bridge ────────────────────────────────────────────────
 // Connects window controls and overrides DB methods to use SQLite via IPC when
