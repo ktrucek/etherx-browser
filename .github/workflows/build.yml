@@ -3,15 +3,15 @@ name: 🔨 Build EtherX Browser
 on:
   push:
     tags:
-      - 'v*'            # triggers on: git tag v2.2.0 && git push --tags
-  workflow_dispatch:    # manual trigger from GitHub Actions tab
+      - "v*" # triggers on: git tag v2.2.0 && git push --tags
+  workflow_dispatch: # manual trigger from GitHub Actions tab
     inputs:
       version:
-        description: 'Release tag (e.g. v2.2.0) — leave empty to just build without releasing'
+        description: "Release tag (e.g. v2.2.0) — leave empty to just build without releasing"
         required: false
-        default: ''
+        default: ""
       create_release:
-        description: 'Create GitHub Release after build?'
+        description: "Create GitHub Release after build?"
         type: boolean
         required: false
         default: true
@@ -30,11 +30,11 @@ jobs:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
-      - name: ⚙️ Setup Node.js 18 LTS
+      - name: ⚙️ Setup Node.js 20 LTS
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
       - name: 🛠️ Install system build dependencies
         run: |
@@ -43,6 +43,7 @@ jobs:
             build-essential \
             python3 \
             python3-pip \
+            python3-setuptools \
             fakeroot \
             dpkg-dev \
             rpm \
@@ -77,16 +78,16 @@ jobs:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
-      - name: ⚙️ Setup Node.js 18 LTS
+      - name: ⚙️ Setup Node.js 20 LTS
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
-      - name: � Setup Python 3.11
+      - name: 🛠️ Setup Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: 📦 Install npm packages (runs electron-rebuild via postinstall)
         run: npm ci
@@ -99,7 +100,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Disable code-signing (no cert on CI)
-          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
 
       - name: 📤 Upload Windows artifacts
         uses: actions/upload-artifact@v4
@@ -119,11 +120,14 @@ jobs:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
-      - name: ⚙️ Setup Node.js 18 LTS
+      - name: ⚙️ Setup Node.js 20 LTS
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
+
+      - name: 🛠️ Install Python setuptools (distutils for node-gyp)
+        run: brew install python-setuptools
 
       - name: 📦 Install npm packages (runs electron-rebuild via postinstall)
         run: npm ci
@@ -135,7 +139,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Disable code-signing (no Apple cert on CI)
-          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+          CSC_IDENTITY_AUTO_DISCOVERY: "false"
 
       - name: 📤 Upload macOS artifacts
         uses: actions/upload-artifact@v4
