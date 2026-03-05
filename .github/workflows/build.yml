@@ -127,7 +127,7 @@ jobs:
           cache: "npm"
 
       - name: 🛠️ Install Python setuptools (distutils for node-gyp)
-        run: brew install python-setuptools
+        run: brew install python-setuptools || true
 
       - name: 📦 Install npm packages
         run: npm ci
@@ -135,7 +135,7 @@ jobs:
           CXXFLAGS: -std=c++20
 
       - name: 🔨 Build macOS x64 DMG
-        run: npx electron-builder --mac dmg --x64 --publish never
+        run: npx electron-builder --mac dmg zip --x64 --publish never
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC_IDENTITY_AUTO_DISCOVERY: "false"
@@ -165,7 +165,7 @@ jobs:
           cache: "npm"
 
       - name: 🛠️ Install Python setuptools (distutils for node-gyp)
-        run: brew install python-setuptools
+        run: brew install python-setuptools || true
 
       - name: 📦 Install npm packages
         run: npm ci
@@ -173,7 +173,7 @@ jobs:
           CXXFLAGS: -std=c++20
 
       - name: 🔨 Build macOS arm64 DMG
-        run: npx electron-builder --mac dmg --arm64 --publish never
+        run: npx electron-builder --mac dmg zip --arm64 --publish never
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC_IDENTITY_AUTO_DISCOVERY: "false"
