@@ -19,10 +19,10 @@
 
 | Platforma | Format | Veličina | Preuzimi |
 |:---:|:---:|:---:|:---:|
-| 🐧 **Linux** | AppImage (sve distribucije) | ~117 MB | [**Preuzmi AppImage**](https://github.com/ktrucek/etherx-browser/releases/download/v2.0.0/EtherX.Browser-2.0.0.AppImage) |
-| 🐧 **Linux** | .deb (Ubuntu / Debian) | ~80 MB | [**Preuzmi .deb**](https://github.com/ktrucek/etherx-browser/releases/download/v2.0.0/etherx-browser_2.0.0_amd64.deb) |
-| 🪟 **Windows** | Portable .exe (bez instalacije) | ~78 MB | [**Preuzmi .exe**](https://github.com/ktrucek/etherx-browser/releases/download/v2.0.0/EtherX.Browser.2.0.0.exe) |
-| 🪟 **Windows** | ZIP arhiva | ~119 MB | [**Preuzmi .zip**](https://github.com/ktrucek/etherx-browser/releases/download/v2.0.0/EtherX.Browser-2.0.0-win.zip) |
+| 🐧 **Linux** | AppImage (sve distribucije) | ~117 MB | [**Preuzmi AppImage**](https://github.com/ktrucek/etherx-browser/releases/download/v2.1.0/EtherX.Browser-2.1.0.AppImage) |
+| 🐧 **Linux** | .deb (Ubuntu / Debian) | ~80 MB | [**Preuzmi .deb**](https://github.com/ktrucek/etherx-browser/releases/download/v2.1.0/etherx-browser_2.1.0_amd64.deb) |
+| 🪟 **Windows** | Portable .exe (bez instalacije) | ~78 MB | [**Preuzmi .exe**](https://github.com/ktrucek/etherx-browser/releases/download/v2.1.0/EtherX.Browser.2.1.0.exe) |
+| 🪟 **Windows** | ZIP arhiva | ~119 MB | [**Preuzmi .zip**](https://github.com/ktrucek/etherx-browser/releases/download/v2.1.0/EtherX.Browser-2.1.0-win.zip) |
 
 → [**Sve verzije i changelog**](https://github.com/ktrucek/etherx-browser/releases)
 
@@ -36,23 +36,23 @@
 
 ```bash
 # 1. Preuzmi AppImage
-wget "https://github.com/ktrucek/etherx-browser/releases/download/v2.0.0/EtherX Browser-2.0.0.AppImage"
+wget "https://github.com/ktrucek/etherx-browser/releases/download/v2.1.0/EtherX Browser-2.1.0.AppImage"
 
 # 2. Daj izvršne dozvole
-chmod +x "EtherX Browser-2.0.0.AppImage"
+chmod +x "EtherX Browser-2.1.0.AppImage"
 
 # 3. Pokreni
-./"EtherX Browser-2.0.0.AppImage" --no-sandbox
+./"EtherX Browser-2.1.0.AppImage" --no-sandbox
 ```
 
 ### 🐧 Linux — Debian / Ubuntu (.deb)
 
 ```bash
 # 1. Preuzmi .deb
-wget "https://github.com/ktrucek/etherx-browser/releases/download/v2.0.0/etherx-browser_2.0.0_amd64.deb"
+wget "https://github.com/ktrucek/etherx-browser/releases/download/v2.1.0/etherx-browser_2.1.0_amd64.deb"
 
 # 2. Instaliraj
-sudo dpkg -i etherx-browser_2.0.0_amd64.deb
+sudo dpkg -i etherx-browser_2.1.0_amd64.deb
 
 # 3. Pokreni iz menija ili:
 etherx-browser --no-sandbox
@@ -60,7 +60,7 @@ etherx-browser --no-sandbox
 
 ### 🪟 Windows — Portable (bez instalacije)
 
-1. Preuzmi `EtherX Browser 2.0.0.exe`
+1. Preuzmi `EtherX Browser 2.1.0.exe`
 2. Dvostruki klik i pokreni — instalacija **nije** potrebna
 3. Ako Windows SmartScreen upozori: klikni **"Više informacija" → "Svejedno pokreni"**
    *(upozorenje se pojavljuje jer exe nije potpisanim certifikatom — aplikacija je sigurna)*
@@ -68,7 +68,7 @@ etherx-browser --no-sandbox
 ### 🪟 Windows — ZIP
 
 ```
-1. Preuzmi EtherX Browser-2.0.0-win.zip
+1. Preuzmi EtherX Browser-2.1.0-win.zip
 2. Raspakiraj negdje (npr. C:\Programs\EtherX)
 3. Pokreni EtherX Browser.exe
 ```
