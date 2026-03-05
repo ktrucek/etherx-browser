@@ -11,7 +11,7 @@
 
 // Primary UA: Masquerades as Chrome 130 on Windows 10 + EtherX identifier
 const DEFAULT_UA =
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 EtherX/2.2.6';
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 EtherX/2.2.7';
 
 let _current = DEFAULT_UA;
 
