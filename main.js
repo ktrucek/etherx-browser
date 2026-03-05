@@ -103,19 +103,20 @@ app.on('window-all-closed', () => {
 // ─── Create main window ───────────────────────────────────────────────────────
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 1400,
+    width: 1440,
     height: 900,
     minWidth: 800,
     minHeight: 600,
-    frame: false,              // custom title bar (preserve existing style)
-    titleBarStyle: 'hidden',
-    backgroundColor: '#2d2d2d',
+    titleBarStyle: 'hidden',                      // macOS: hidden title bar, shows traffic lights
+    trafficLightPosition: { x: 16, y: 16 },       // macOS: traffic lights on LEFT (like Safari)
+    backgroundColor: '#1a1a2e',                   // deep navy/purple — matches UI theme
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false,
       contextIsolation: true,
-      webviewTag: true,        // keep WebView tabs
+      webviewTag: true,                           // keep WebView tabs
       allowRunningInsecureContent: false,
+      webSecurity: false,                         // allow cross-origin webviews / iframes
     },
     icon: path.join(__dirname, 'src', 'icon.png'),
     show: false,
@@ -125,6 +126,16 @@ function createWindow() {
 
   mainWindow.once('ready-to-show', () => mainWindow.show());
   mainWindow.on('closed', () => { mainWindow = null; });
+
+  // macOS: inject CSS so traffic lights don't overlap left-side content
+  if (process.platform === 'darwin') {
+    mainWindow.webContents.on('did-finish-load', () => {
+      mainWindow?.webContents.insertCSS(
+        '.title-bar { padding-left: 78px !important; }' +
+        '.win-btns { display: none !important; }'        // hide custom buttons on macOS (OS provides them)
+      );
+    });
+  }
 
   // Window controls (keep existing IPC names)
   ipcMain.on('window-minimize', () => mainWindow?.minimize());

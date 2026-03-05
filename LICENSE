@@ -1,0 +1,70 @@
+ETHERX BROWSER — PROPRIETARY SOFTWARE LICENSE
+Copyright © 2024–2026 kriptoentuzijasti.io. All Rights Reserved.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PROPRIETARY AND CONFIDENTIAL SOFTWARE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This software and all associated source code, binaries, documentation, data,
+and assets (collectively, the "Software") are the exclusive intellectual
+property of kriptoentuzijasti.io and its authorized contributors.
+
+1.  GRANT OF LICENSE
+    This Software is licensed, not sold. You are granted a limited,
+    non-exclusive, non-transferable, revocable license to install and use
+    EtherX Browser on devices you own or control, solely for personal or
+    internal business purposes.
+
+2.  RESTRICTIONS
+    You MAY NOT, without prior written permission from kriptoentuzijasti.io:
+    a) Copy, reproduce, distribute, publish, or transmit the Software or any
+       portion thereof;
+    b) Modify, adapt, translate, reverse engineer, decompile, disassemble, or
+       create derivative works based on the Software;
+    c) Sublicense, sell, resell, transfer, assign, or otherwise commercialize
+       the Software;
+    d) Remove, alter, or obscure any proprietary notices, labels, or marks
+       embedded in or affixed to the Software;
+    e) Use the Software to build a competing product or service.
+
+3.  INTELLECTUAL PROPERTY
+    The EtherX Browser name, logo, branding, source code, design, and all
+    related materials are the exclusive property of kriptoentuzijasti.io.
+    No intellectual property rights are transferred by this license.
+
+4.  THIRD-PARTY COMPONENTS
+    EtherX Browser incorporates open-source components (Electron, Chromium,
+    Node.js, and others), each governed by their respective licenses. Those
+    components remain subject to the terms under which they were originally
+    released. This proprietary license applies exclusively to the EtherX-
+    specific code, design, and functionality created by kriptoentuzijasti.io.
+
+5.  PASSWORD & DATA DISCLAIMER
+    EtherX Browser stores passwords and sensitive data using AES-256-GCM
+    encryption locally on your device. kriptoentuzijasti.io does not collect,
+    transmit, or have the ability to access or decrypt your stored passwords.
+    You store all data at your own risk. kriptoentuzijasti.io is not liable
+    for any loss, theft, or unauthorized access to locally stored data.
+
+6.  NO WARRANTY
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL
+    kriptoentuzijasti.io OR ITS CONTRIBUTORS BE LIABLE FOR ANY CLAIM, DAMAGES,
+    OR OTHER LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
+
+7.  GOVERNING LAW
+    This License shall be governed by and construed in accordance with the
+    laws of the Republic of Croatia, without regard to its conflict-of-law
+    provisions.
+
+8.  TERMINATION
+    This license is effective until terminated. It will terminate automatically
+    if you fail to comply with any of its terms. Upon termination, you must
+    destroy all copies of the Software in your possession.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+For licensing inquiries, permissions, or commercial use requests:
+  📧  info@kriptoentuzijasti.io
+  🌐  https://kriptoentuzijasti.io
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
