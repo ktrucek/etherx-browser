@@ -52,6 +52,7 @@ jobs:
         run: npm ci
         env:
           npm_config_build_from_source: true
+          CXXFLAGS: -std=c++20
 
       - name: 🔨 Build Linux packages
         run: npx electron-builder --linux --publish never
@@ -90,8 +91,7 @@ jobs:
       - name: 📦 Install npm packages (runs electron-rebuild via postinstall)
         run: npm ci
         env:
-          npm_config_msvs_version: 2022
-
+          npm_config_msvs_version: 2022          CXXFLAGS: /std:c++20
       - name: 🔨 Build Windows packages
         run: npx electron-builder --win --publish never
         env:
@@ -126,6 +126,8 @@ jobs:
 
       - name: 📦 Install npm packages (runs electron-rebuild via postinstall)
         run: npm ci
+        env:
+          CXXFLAGS: -std=c++20
 
       - name: 🔨 Build macOS packages
         run: npx electron-builder --mac --publish never
